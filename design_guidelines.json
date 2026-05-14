@@ -1,0 +1,92 @@
+{
+  "theme": "Dark / Light Hybrid",
+  "archetype": "5 (Jewel & Luxury) mixed with 4 (Swiss & High-Contrast) for Premium Architecture",
+  "typography": {
+    "heading_font": "Cabinet Grotesk",
+    "body_font": "Manrope",
+    "font_pairings_rationale": "Cabinet Grotesk provides a modern, structural, and premium authoritative feel avoiding the overused 'tech' look of Inter/Space Grotesk. Manrope offers exceptional legibility for dense dashboard data.",
+    "scale": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tighter font-black leading-tight",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight font-bold leading-snug",
+      "h3": "text-xl sm:text-2xl font-bold tracking-tight",
+      "h4": "text-lg sm:text-xl font-semibold",
+      "body": "text-base leading-relaxed",
+      "small": "text-sm text-muted-foreground",
+      "overline": "text-xs font-bold uppercase tracking-[0.2em]"
+    }
+  },
+  "colors": {
+    "palette": {
+      "primary": "#1C2541",
+      "primary_dark": "#0B132B",
+      "emerald": "#06D6A0",
+      "emerald_dark": "#048A81",
+      "orange_accent": "#FF9F1C",
+      "graphite_gray": "#4A4A48",
+      "white": "#FFFFFF",
+      "background_light": "#F8F9FA",
+      "background_dark": "#0A0C10"
+    },
+    "gradients": {
+      "premium_overlay": "bg-gradient-to-t from-[#0B132B]/90 via-[#1C2541]/50 to-transparent",
+      "brand_gradient": "bg-gradient-to-br from-[#1C2541] via-[#0B132B] to-[#048A81]"
+    },
+    "rationale": "Deep navy (#1C2541/#0B132B) establishes trust and premium contractor authority. Emerald (#06D6A0) reflects sports turf and energy. Orange (#FF9F1C) is used sparingly for high-converting CTAs."
+  },
+  "layout_and_components": {
+    "hero_section": {
+      "layout": "Fullscreen cinematic background image with overlay (`bg-black/40` to `bg-black/60`). Text block centered or heavily left-aligned with overlaps. Beneath the main CTA, a row of animated statistics counters (e.g., '100+ Projects', '15 Years Exp') floating on a glassmorphism card over the hero bottom edge.",
+      "components": "H1, Subtitle, Primary CTA (Orange), Secondary CTA (Outline White), Framer Motion Counters."
+    },
+    "service_cards": {
+      "design": "Bento Grid layout (grid-cols-1 md:grid-cols-2 lg:grid-cols-4). Cards should have relative positioning, using either high-quality Unsplash backgrounds with dark gradient overlays or flat background with a top icon. Include hover state: `-translate-y-2`, shadow-xl, and an animated arrow emerging.",
+      "styles": "rounded-xl border border-border/40 p-6 overflow-hidden."
+    },
+    "portfolio_gallery": {
+      "layout": "Grid-based masonry or uniform grid with a category filter row above (All, Mini Soccer, Basketball, etc.).",
+      "features": "Implement a 'Before-After' image slider component inside the cards or upon clicking a modal. The slider needs an interactive drag handle."
+    },
+    "admin_dashboard": {
+      "layout": "Sidebar navigation (left, or right for RTL) + Main content area. Topbar with global search and user profile.",
+      "glassmorphism": "Use Crystal Glass effect for the sidebar and topbar: `backdrop-blur-xl bg-white/70` (light mode) or `bg-black/60` (dark mode), with a crisp 1px inner border (`border-white/20` or `border-white/10`).",
+      "widgets": "Dashboard cards should be tactile (Neumorphism touch or crisp flat UI with 1px border). Charts (Shadcn/Recharts) should utilize the Emerald and Orange palette."
+    },
+    "floating_elements": {
+      "whatsapp": "Fixed bottom right, z-50, vibrant Emerald background, pulsing animation (`animate-pulse` on a ring layer behind it)."
+    },
+    "spacing": "Generous. Use `py-24` or `py-32` for section spacing. Card paddings should be `p-6` or `p-8`."
+  },
+  "animations": {
+    "library": "Framer Motion",
+    "guidelines": [
+      "Scroll reveals: Use `initial={{ opacity: 0, y: 20 }}` and `whileInView={{ opacity: 1, y: 0 }}` for staggered lists.",
+      "Hero: Smooth fade up on load.",
+      "Micro-interactions: Buttons should scale down slightly on tap (`whileTap={{ scale: 0.98 }}`).",
+      "Counters: Use `framer-motion` useSpring combined with useInView for smooth number incrementing."
+    ]
+  },
+  "images": {
+    "hero_cinematic": [
+      {"url": "https://images.unsplash.com/photo-1546717003-caee5f93a9db?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTN8MHwxfHNlYXJjaHwxfHxkcm9uZSUyMHNvY2NlciUyMGZpZWxkfGVufDB8fHx8MTc3ODc1Mzg1Nnww&ixlib=rb-4.1.0&q=85", "description": "Empty football field aerial - Perfect for main cinematic hero background"},
+      {"url": "https://images.unsplash.com/photo-1622460132742-d218ff93958d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTN8MHwxfHNlYXJjaHw0fHxkcm9uZSUyMHNvY2NlciUyMGZpZWxkfGVufDB8fHx8MTc3ODc1Mzg1Nnww&ixlib=rb-4.1.0&q=85", "description": "Aerial view soccer field daytime - Good alternate hero"}
+    ],
+    "sports_fields_services": [
+      {"url": "https://images.unsplash.com/photo-1550881111-7cfde14b8073?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzl8MHwxfHNlYXJjaHw0fHxzcG9ydHMlMjBmaWVsZCUyMGNvbnN0cnVjdGlvbnxlbnwwfHx8fDE3Nzg3NTM4NTZ8MA&ixlib=rb-4.1.0&q=85", "description": "Futsal / Mini Soccer grass"},
+      {"url": "https://images.unsplash.com/photo-1536578524251-eff3c73e9207?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHw0fHxiYXNrZXRiYWxsJTIwY291cnQlMjBtb2Rlcm58ZW58MHx8fHwxNzc4NzUzODU2fDA&ixlib=rb-4.1.0&q=85", "description": "Modern Basketball Court outdoors"},
+      {"url": "https://images.unsplash.com/photo-1600534220378-df36338afc40?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwxfHxiYXNrZXRiYWxsJTIwY291cnQlMjBtb2Rlcm58ZW58MHx8fHwxNzc4NzUzODU2fDA&ixlib=rb-4.1.0&q=85", "description": "Basketball hoop details"}
+    ],
+    "construction_process": [
+      {"url": "https://images.unsplash.com/photo-1770039998244-7ed06c2c9259?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2ODl8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBlbmdpbmVlciUyMHN0YWRpdW18ZW58MHx8fHwxNzc4NzUzODU2fDA&ixlib=rb-4.1.0&q=85", "description": "Stadium under construction"}
+    ]
+  },
+  "testing": {
+    "attributes": "All interactive elements, forms, and navigation links MUST include data-testid. Examples: `data-testid='hero-cta'`, `data-testid='service-card-1'`, `data-testid='lang-switcher'`."
+  },
+  "instructions_to_main_agent": [
+    "Build the UI using pure HTML+Tailwind for organic marketing layouts to achieve the premium architecture vibe.",
+    "Use Shadcn UI primarily for functional/interactive elements (Forms, Modals, Admin Dashboard widgets, Dropdowns).",
+    "Implement internationalization (i18n) for ID, EN, and AR. Ensure full RTL layout toggle when Arabic is selected (dir='rtl').",
+    "Add Dark/Light mode toggle utilizing standard Tailwind 'dark:' utility classes.",
+    "Do not use generic sans fonts like Inter or Space Grotesk. Map Cabinet Grotesk for headings and Manrope for body text."
+  ]
+}
